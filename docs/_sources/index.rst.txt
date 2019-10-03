@@ -25,3 +25,4 @@ Indices and tables
    :numbered:
 
    /problems/001
+   /problems/002
