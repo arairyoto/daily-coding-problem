@@ -3,8 +3,13 @@ from operator import mul
 
 
 def helper(l):
-    p = reduce(mul, l, 1)
-    return list(map(lambda x: p / x, l))
+    n = len(l)
+    result = [1] * n
+    for i in range(n):
+        for j in range(n):
+            if i != j:
+                result[i] *= l[j]
+    return result
 
 
 assert helper([1, 2, 3, 4, 5]) == [120, 60, 40, 30, 24]
