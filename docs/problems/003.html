@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>3. Problem #003 &#8212; daily-coding-problem v0.0.1 ドキュメント</title>
+    <link rel="stylesheet" href="../_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="4. Problem #004" href="004.html" />
+    <link rel="prev" title="2. Problem #002" href="002.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="../_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head><body>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="004.html" title="4. Problem #004"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="002.html" title="2. Problem #002"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">daily-coding-problem v0.0.1 ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="problem-003">
+<h1>3. Problem #003<a class="headerlink" href="#problem-003" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="line-block">
+<div class="line">Given the root to a binary tree, implement serialize(root), which serializes the</div>
+<div class="line">tree into a string, and deserialize(s), which deserializes the string back into the tree.</div>
+<div class="line">For example, given the following Node class</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Node</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">left</span> <span class="o">=</span> <span class="n">left</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="n">right</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">The following test should pass:</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">,</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;left.left&#39;</span><span class="p">)),</span> <span class="n">Node</span><span class="p">(</span><span class="s1">&#39;right&#39;</span><span class="p">))</span>
+<span class="k">assert</span> <span class="n">deserialize</span><span class="p">(</span><span class="n">serialize</span><span class="p">(</span><span class="n">node</span><span class="p">))</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">left</span><span class="o">.</span><span class="n">val</span> <span class="o">==</span> <span class="s1">&#39;left.left&#39;</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="002.html"
+                        title="前の章へ">2. Problem #002</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="004.html"
+                        title="次の章へ">4. Problem #004</a></p>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/problems/003.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="004.html" title="4. Problem #004"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="002.html" title="2. Problem #002"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">daily-coding-problem v0.0.1 ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, ryoto.arai.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0 で生成しました。
+    </div>
+  </body>
+</html>

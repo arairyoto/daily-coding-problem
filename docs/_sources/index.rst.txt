@@ -26,3 +26,6 @@ Indices and tables
 
    /problems/001
    /problems/002
+   /problems/003
+   /problems/004
+   /problems/005
